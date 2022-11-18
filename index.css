@@ -21,18 +21,6 @@ body {
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.sc-value {
-    border: 10px solid red;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 1000;
-    background-color: gold;
-    font-size: 50px;
-    padding: 5px 10px;
-    min-width: 200px;
-    display:block;
-}
 
 /* header */
 header {
@@ -137,7 +125,7 @@ header .ul-li .sub-li:hover {
     height: 100%;
     object-fit: cover;
     object-position: center center;
-    filter:brightness(0.4) blur(3px);
+    filter:brightness(0.6) blur(3px);
     transform:scale(1.2);
 }
 
@@ -193,6 +181,7 @@ header .ul-li .sub-li:hover {
     line-height: 60px;
     position: absolute;
     left:13%;
+    transition:1s;
 }
 
 .section2 .container {
@@ -250,6 +239,7 @@ header .ul-li .sub-li:hover {
 
 .section2 .text1 {
     padding-top: 20px;
+    color:#0c4630;
 }
 
 .section2 .text2 {
@@ -381,12 +371,13 @@ header .ul-li .sub-li:hover {
 .section4 .scene .container .left .btn {
     font-size: 15px;
     display: flex;
+    cursor: pointer;
 }
 
 .section4 .scene .container .left .circle {
     width: 15px;
     height: 15px;
-    background-color: gold;
+    background-color: #0c4630;
     border-radius: 50%;
     margin-right: 10px;
     transition: 0.2s;
@@ -484,22 +475,22 @@ header .ul-li .sub-li:hover {
 
 .section4 .box1 {
     left: 100%;
-    background-color: rgba(0, 89, 255, 0.5);
+    background-color: rgba(239, 21, 30, 0.5);
 }
 
 .section4 .box2 {
     left: calc(100% + 1000px);
-    background-color: rgba(174, 0, 255, 0.5);
+    background-color: rgba(255, 151, 0, 0.5);
 }
 
 .section4 .box3 {
     left: calc(100% + 2000px);
-    background-color: rgba(255, 0, 55, 0.5);
+    background-color: rgba(0, 110, 205, 0.5);
 }
 
 .section4 .box4 {
     left: calc(100% + 3000px);
-    background-color: rgba(255, 0, 128, 0.5);
+    background-color: rgba(12, 70, 48, 0.5);
 }
 
 .section5 {
@@ -585,20 +576,21 @@ header .ul-li .sub-li:hover {
 }
 
 .section6 .section6-1 .manpic {
+    width:100%;
     position: absolute;
 }
 .section6 .section6-1 .manpic .text-box {
     transform:rotate(-30deg);
 }
 .section6 .section6-1 .manpic .text {
-    font-size:300px;
+    font-size:200px;
     font-weight:500;
     color:#cfcfcf;
     white-space:nowrap;
 }
 
 .section6 .section6-1 .manpic .text-box1 {
-    top:500px;
+    top:600px;
     left:50px;
     z-index:99;
 }
@@ -614,6 +606,7 @@ header .ul-li .sub-li:hover {
     justify-content: center;
     top: 400px;
     z-index:100;
+    margin:0 auto;
 }
 
 .section6 .section6-1 .manpic .man img {
@@ -627,6 +620,7 @@ header .ul-li .sub-li:hover {
 .section6 .section6-2 .news {
     width:90%;
     margin:0 auto;
+    cursor: pointer;
 }
 
 .section6 .section6-2 .news .title {
@@ -635,13 +629,40 @@ header .ul-li .sub-li:hover {
 }
 .section6 .section6-2 .news .bar {
     border-top:1px solid #b9b9b9;
-    background-image:linear-gradient(90deg, #8383c0, #e760a6);
+    background-image:linear-gradient(90deg, #0c4630, #f26b24);
     height:3px;
     margin-top:15px;
     margin-bottom:30px;
 }
-.section6 .section6-2 .news .news-all {
+.section6 .section6-2 .news .btn {
+    cursor: pointer;
+    display:flex;
+    gap:10px;
+    margin-top:10px;
+}
+.section6 .section6-2 .news .btn .circle{
+    height:10px;
+    width:10px;
+    background-color:#0c4630;
+    border-radius:50%;
+    position: absolute;
+    top:50%;
+    transform:translateY(-50%);
+    transition:0.2s;
+}
 
+.section6 .section6-2 .news .btn:hover .circle {
+    height:15px;
+    width:15px;
+}
+
+.section6 .section6-2 .news .btn .btn-text{
+    margin-left:20px;
+    transition:0.2s;
+}
+
+.section6 .section6-2 .news .btn:hover .btn-text {
+    color:#0c4630
 }
 
 .owl-theme .owl-prev {
@@ -657,14 +678,18 @@ header .ul-li .sub-li:hover {
     width:90%;
     margin:0 auto;
     display:flex;
+    gap:50px;
     padding-bottom:100px;
 }
 .section6 .section6-3 .logo {
-    width:30%
+    width:60%;
+    overflow:hidden;
+    cursor: pointer;
 }
 .section6 .section6-3 .logo img {
-    width:30%;
+    width:100%;
 }
 .section6 .section6-3 .box {
-    width:17.5%;
+    width:100%;
+    text-align:right;
 }
