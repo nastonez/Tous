@@ -1,0 +1,670 @@
+* {
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+img {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.sc-value {
+    border: 10px solid red;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    background-color: gold;
+    font-size: 50px;
+    padding: 5px 10px;
+    min-width: 200px;
+    display:block;
+}
+
+/* header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    height: 150px;
+    width: 100%;
+    background-color:#0c4630;
+    transition: 1s;
+}
+
+header .logo {
+    top:50%;
+    transform:translateY(-50%);
+    left:100px;
+}
+
+header .menu {
+    position: absolute;
+    top:40%;
+    left:28%;
+    display:block;
+}
+
+header nav {
+    display: flex;
+    gap:10px;
+}
+
+header .nav-ul {
+    width:220px;
+    text-align:center;
+}
+
+header .nav-ul p {
+    font-size:20px;
+    color:white;
+}
+
+header .ul-li {
+    top:15px;
+    width:200px;
+    line-height:30px;
+    background-color: white;
+    display:none;
+    padding-top:30px;
+    padding-bottom:30px;
+    padding-left:20px;
+    text-align:left;
+    cursor: pointer;
+}
+
+header .ul-li .sub-li:hover {
+    color:#0c4630;
+}
+
+.slogan {
+    position: fixed;
+    width: 90%;
+    top: 300px;
+    left: 5%;
+    z-index: 101;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    transition: 1.3s;
+    pointer-events: none;
+}
+
+.slogan .t-5 {
+    margin-left:100px;
+}
+
+.slogan .t-7 {
+    margin-right:100px;
+}
+
+.slogan img {
+    width: 100%;
+}
+
+.section1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.section1 .vod {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section1 .vod video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter:brightness(0.4) blur(3px);
+    transform:scale(1.2);
+}
+
+.section1 .text-group {
+    top: 100%;
+    left: 0;
+    color: white;
+    max-width: 1400px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.section1 .text-group h3 {
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    line-height: 60px;
+}
+
+.section1 .text-group h3 .green {
+    color:#288964;
+}
+
+.section1 .text-group p {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+.section1 .text-group p .small {
+    font-size:20px;
+}
+
+/* section2 그리드부분 */
+.section2 {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding-top: 100px;
+    padding-bottom: 500px;
+    z-index:500;
+}
+
+.section2 .section-title {
+    font-size: 60px;
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    font-weight: 900;
+    line-height: 60px;
+    position: absolute;
+    left:13%;
+}
+
+.section2 .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 200px;
+    max-width: 1400px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top:300px;
+}
+
+.section2 .item {
+    cursor: pointer;
+}
+
+.section2 .item:nth-child(3n) {
+    top: 300px;
+}
+
+.section2 .item:nth-child(3n-1) {
+    top: 150px;
+}
+
+.section2 .img-box {
+    overflow: hidden;
+}
+
+.section2 .item img {
+    width: 100%;
+    transition: 0.8s;
+}
+
+.section2 .item .img2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.section2 .text-box {
+    top: -20px;
+    transform: skewY(-8deg);
+    text-transform: uppercase;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.section2 .text {
+    font-weight: 900;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.section2 .text1 {
+    padding-top: 20px;
+}
+
+.section2 .text2 {
+    opacity: 0;
+    position: absolute;
+    bottom: -10px;
+    width: calc(100% - 40px);
+}
+
+.section2 .text .t {
+    background-color:#0c4630;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    line-height: 40px;
+}
+
+.section2 .text .t1 {
+    width: 70%;
+    left: 30%;
+    top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 33px;
+}
+
+.section2 .text .t2 {
+    width: 70%;
+    color: white;
+    font-size: 25px;
+}
+
+.section2 .text .t3 {
+    background-color: white;
+    color:#0c4630;
+    text-align: right;
+    padding-bottom: 10px;
+}
+
+.section2 .item:hover .img1 {
+    opacity: 0;
+}
+
+.section2 .item:hover .img2 {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.section2 .item:hover .text1 {
+    opacity: 0;
+}
+
+.section2 .item:hover .text2 {
+    opacity: 1;
+}
+
+.section2 .item .img-box {
+    background-color: burlywood;
+}
+
+.vod2 {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.vod2 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter:blur(5px);
+    transform:scale(1.5);
+}
+
+.section3 {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section3 h1 {
+    text-transform: uppercase;
+    font-size: 12vw;
+    line-height: 12vw;
+    color: white;
+}
+
+.section4 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.section4 .scene {
+    width: 100%;
+    height: 100%;
+}
+
+.section4 .scene .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.section4 .scene .container .left {
+    color: white;
+    margin-bottom: 60px;
+}
+
+.section4 .scene .container .left .top-text {
+    font-size: 80px;
+    line-height: 95px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.section4 .scene .container .left .btn {
+    font-size: 15px;
+    display: flex;
+}
+
+.section4 .scene .container .left .circle {
+    width: 15px;
+    height: 15px;
+    background-color: gold;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: 0.2s;
+}
+
+.section4 .scene .container .left .btn:hover .circle {
+    transform: scale(1.5);
+}
+
+.section4 .scene .container .left .btn-text {
+    line-height: 13px;
+}
+
+.section4 .scene .container .right {
+    margin-top: 400px;
+    margin-left: 160px;
+}
+
+.section4 .scene .container .right .bottom-text {
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.section4 .box {
+    position: absolute;
+    top: 0;
+    width: 800px;
+    height: calc(100vh - 180px);
+    margin-right: 200px;
+    padding: 90px 70px;
+}
+
+.section4 .box .container {
+    margin: 0 auto;
+}
+
+.section4 .box .container .main {
+    color: white;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 45px;
+    height: 300px;
+}
+
+.section4 .box .container .main .small {
+    font-size: 20px;
+    vertical-align: text-top;
+}
+
+.section4 .box .container .part {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+
+.section4 .box .container .sub-text {
+    color: white;
+    font-size: 26px;
+    height: 300px
+}
+
+.section4 .box .container .sub-text h3 {
+    font-weight: 600;
+}
+
+.section4 .box .container .sub-text p {
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.section4 .box .container .under-part {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section4 .box .container .under-part .item {
+    width: auto;
+    color: white;
+}
+
+.section4 .box .container .under-part .item h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.section4 .box .container .under-part .item p {
+    font-weight: 400;
+}
+
+.section4 .box1 {
+    left: 100%;
+    background-color: rgba(0, 89, 255, 0.5);
+}
+
+.section4 .box2 {
+    left: calc(100% + 1000px);
+    background-color: rgba(174, 0, 255, 0.5);
+}
+
+.section4 .box3 {
+    left: calc(100% + 2000px);
+    background-color: rgba(255, 0, 55, 0.5);
+}
+
+.section4 .box4 {
+    left: calc(100% + 3000px);
+    background-color: rgba(255, 0, 128, 0.5);
+}
+
+.section5 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.section5 .influ {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.section5 .influ h3 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.section5 .influ p {
+    font-size: 20px;
+    transition-delay: 0.3s;
+    transition: 0.3s;
+}
+
+
+.section6 {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    background-color: white;
+}
+
+.section6 .section6-1 {}
+
+.section6 .section6-1 .main-text {
+    position: relative;
+    width: 100%;
+    height: 1300px;
+    overflow:hidden;
+    z-index:105;
+}
+
+.section6 .section6-1 .main-text .text1 {
+    position: absolute;
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 70px;
+    top: 100px;
+    left: 140px;
+    z-index:105;
+}
+
+.section6 .section6-1 .main-text .text2 {
+    position: absolute;
+    font-size: 25px;
+    font-weight: 600;
+    top: 300px;
+    left: 1200px;
+    z-index:105;
+}
+
+.section6 .section6-1 .main-text .text3 {
+    position: absolute;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    top: 800px;
+    left: 40px;
+}
+
+.section6 .section6-1 .main-text .text3 h3 {
+    font-weight: 500;
+}
+
+.section6 .section6-1 .main-text .text3 p {
+    font-weight: 100;
+}
+
+.section6 .section6-1 .manpic {
+    position: absolute;
+}
+.section6 .section6-1 .manpic .text-box {
+    transform:rotate(-30deg);
+}
+.section6 .section6-1 .manpic .text {
+    font-size:300px;
+    font-weight:500;
+    color:#cfcfcf;
+    white-space:nowrap;
+}
+
+.section6 .section6-1 .manpic .text-box1 {
+    top:500px;
+    left:50px;
+    z-index:99;
+}
+
+.section6 .section6-1 .manpic .text-box2 {
+    top:1000px;
+    left:-650px;
+    z-index:101;
+}
+
+.section6 .section6-1 .manpic .man {
+    display: flex;
+    justify-content: center;
+    top: 400px;
+    z-index:100;
+}
+
+.section6 .section6-1 .manpic .man img {
+    width: 70%;
+}
+
+.section6 .section6-2 {
+    margin-top:200px;
+}
+
+.section6 .section6-2 .news {
+    width:90%;
+    margin:0 auto;
+}
+
+.section6 .section6-2 .news .title {
+    font-size:20px;
+    font-weight:600;
+}
+.section6 .section6-2 .news .bar {
+    border-top:1px solid #b9b9b9;
+    background-image:linear-gradient(90deg, #8383c0, #e760a6);
+    height:3px;
+    margin-top:15px;
+    margin-bottom:30px;
+}
+.section6 .section6-2 .news .news-all {
+
+}
+
+.owl-theme .owl-prev {
+    width:30px;
+    height:30px;
+}
+.owl-theme .owl-next {
+    width:30px;
+    height:30px;
+}
+
+.section6 .section6-3 {
+    width:90%;
+    margin:0 auto;
+    display:flex;
+    padding-bottom:100px;
+}
+.section6 .section6-3 .logo {
+    width:30%
+}
+.section6 .section6-3 .logo img {
+    width:30%;
+}
+.section6 .section6-3 .box {
+    width:17.5%;
+}
